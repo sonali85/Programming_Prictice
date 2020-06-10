@@ -1,0 +1,18 @@
+arr = [0, 1, 1, 2, 2]
+ind = [1,2,3,0]
+# for i in ind:
+#     if i in arr:
+#         print(i,arr.index(i))
+#     else:
+#         print(i,-1)
+
+#----------------------or-----------------------
+for j in ind:
+     t=False
+     for i in range(len(arr)):
+        if j==arr[i]:
+            t=True
+            print(j,i)
+            break
+     if not t:
+         print(j,-1)
