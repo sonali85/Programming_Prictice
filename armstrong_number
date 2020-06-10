@@ -1,0 +1,51 @@
+import math
+num = 153
+
+def armstrong(num):
+    list1 = list(str(num))
+    result = 0
+    for i in list1:
+        res = math.pow(int(i),len(list1))
+        result=result+res
+
+    if result == int(num):
+        print("armstrong number")
+    else:
+        print("not armstrong number ")
+
+armstrong(num)
+
+----------------------------------------------
+
+num = 548834
+
+def armstrong(num):
+    list1 = list(str(num))
+    result = 0
+    for i in list1:
+        ln = len(list1)
+        sum=0
+        while True:
+            if sum==0:
+                sum = int(i)
+            else:
+                sum=int(i)*sum+0
+            ln =ln-1
+            if ln==0:
+                break
+        result=result+sum
+    if result==num:
+        print("armstrong")
+    else:
+        print("not armstrong")
+
+armstrong(num)
+
+
+
+#Ex: -
+# 
+# 371=33+73+13=27+343+1=371 
+# 
+# 1634=14+64+34+44=1+1296+81+256=1634
+
