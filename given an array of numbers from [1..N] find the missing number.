@@ -1,0 +1,20 @@
+#find missing number it could be sing number or many numbers
+
+a = [ 1,2,3,4,5,6,8,9]
+
+def missing_number(arr):
+    if arr:
+        list1 = list(range(min(a), (max(a) + 1)))
+        if sum(list1) > sum(a):
+            print("missing number",sum(list1) - sum(a))
+        else:
+            print("all numbers are present")
+
+    else:
+        print("arr is empty")
+
+missing_number(a)
+
+
+#output
+#missing number 7
