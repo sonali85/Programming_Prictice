@@ -1,0 +1,36 @@
+#linear search
+#The linear search is used to find an item in a list. The items do not have to be in order.
+# To search for an item, start at the beginning of the list
+# and continue searching until either the end of the list is reached or the item is found.
+'''list1 =[ 1,3,7,4,2,9,0]
+item= 42
+flag = False
+for i in list1:
+    if i == item:
+        print("fount",item)
+        flag = True
+        break
+if not flag:
+    print("not found") '''
+
+#Binary Search
+#The binary search is used to find an item in an ORDERED list.
+
+list1= [1,2,4,5,6,7,8,9,10]
+item = 6
+num = len(list1)//2
+print(num)
+if list1[num] == item:
+    print("found")
+
+if list1[num+1] < item:
+    print("going")
+    for i in list1[num+1:]:
+        if i == item:
+            print("found")
+else:
+    print("go")
+    for i in list1[:num-1]:
+        if i == item:
+            print("found")
+
