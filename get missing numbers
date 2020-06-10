@@ -1,0 +1,23 @@
+
+
+inp = [3,4,5,9]
+arr = list(range(min(inp),max(inp)+1))
+
+def get_missing_numbers(inp):
+    if inp:
+        print("original arr == ",inp)
+        print("missing numbers===",list(set(arr).symmetric_difference(inp)))
+    else:
+        print("empty input")
+
+get_missing_numbers(inp)
+
+
+
+
+
+
+
+#output
+# original arr ==  [3, 4, 5, 9]
+# missing numbers=== [6, 7, 8]
