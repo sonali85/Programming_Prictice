@@ -1,0 +1,12 @@
+#Stacks
+#A stack is a last in, first out (LIFO) structure. Items are stored in the stack,
+# but if an item is taken from the stack, it is always the last one that was added.
+
+stack = ["Amar", "Akbar", "Anthony"]
+stack.append("Ram")
+stack.append("Iqbal")
+print(stack)
+print(stack.pop())
+print(stack)
+print(stack.pop())
+print(stack)
