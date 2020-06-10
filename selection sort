@@ -1,0 +1,9 @@
+#selection sort
+#finding minimum number from unsorted array and place it on correct postion
+'''list1= [3,67,93,89,67,5,23]
+for i in range(len(list1)):
+    m = min(list1[i:])
+    ind = list1.index(m)
+    if list1[i] > m:
+        list1[i] , list1[ind] = list1[ind],list1[i]
+print((list1)) '''
