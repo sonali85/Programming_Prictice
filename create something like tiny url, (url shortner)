@@ -1,0 +1,36 @@
+import uuid
+url_list = {}
+def shortenURL(inp):
+    if inp:
+        id = str(uuid.uuid1())
+        form_short_url  = "my://shorten_url/" + id
+        if (inp in url_list.values()) or (form_short_url in url_list.keys()):
+            print("duplicating url")
+        else:
+            url_list[form_short_url]= inp
+    else:
+        print("incorrect url")
+
+def GetLongURL(url):
+    if url:
+        for k,v in url_list.items():
+            if k == url:
+                print(v , " == ", k)
+
+l1 = "https://trade.angelbroking.com/portfolio/equity/index_v1"
+l2 = "https://mail.google.com/mail/u/0/?tab=wm#search/in%3Asent+suku.3692%40gmail.com"
+shortenURL(l2)
+shortenURL(l1)
+print(url_list)
+
+print("/////////////////////////////////////////////////////////////////////////////////////     get original url   \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\",list(url_list.keys())[0])
+
+GetLongURL(list(url_list.keys())[0])
+
+
+
+
+ 
+# {'my://shorten_url/fa4f3c5c-ab0e-11ea-8c14-d0c637ca0cff': 'https://mail.google.com/mail/u/0/?tab=wm#search/in%3Asent+suku.3692%40gmail.com', 'my://shorten_url/fa50e7b8-ab0e-11ea-b606-d0c637ca0cff': 'https://trade.angelbroking.com/portfolio/equity/index_v1'}
+# /////////////////////////////////////////////////////////////////////////////////////     get original url   \\\\\\\\\\\\\\\\\\ my://shorten_url/fa4f3c5c-ab0e-11ea-8c14-d0c637ca0cff
+# https://mail.google.com/mail/u/0/?tab=wm#search/in%3Asent+suku.3692%40gmail.com  ==  my://shorten_url/fa4f3c5c-ab0e-11ea-8c14-d0c637ca0cff
