@@ -1,0 +1,45 @@
+# Write a function which takes an array and prints the majority element (if it exists), otherwise prints “No Majority Element”. A majority element in an array A[] of size n is an element that appears more than n/2 times (and hence there is at most one such element).
+# Examples :
+#
+# Input : {3, 3, 4, 2, 4, 4, 2, 4, 4}
+# Output : 4
+# Explanation: The frequency of 4 is 5 which is greater
+# than the half of the size of the array size.
+#
+# Input : {3, 3, 4, 2, 4, 4, 2, 4}
+# Output : No Majority Element
+# Explanation: There is no element whose frequency is
+# greater than the half of the size of the array size.
+
+
+
+dict = {}
+inp = [3, 3, 4, 2, 4, 4, 2, 4]
+
+def getvotealgo(inp):
+    final = 0
+    if inp:
+        for i in range(len(inp)):
+            cnt = 0
+            if inp[i] not in dict.keys():
+                for j in inp[i:]:
+                    if inp[i] == j:
+                        cnt+=1
+                dict[inp[i]] = cnt
+        print(dict)
+    else:
+        print("empty input")
+        return 
+
+    for i ,k in dict.items():
+        #print(max(list(dict.values()))//2)
+        if (max(list(dict.values())))  > (len(inp)/2) and k ==max(list(dict.values())):
+            fianl = i
+            break
+    if final:
+        print(final)
+    else:
+        print("No Majority Element")
+
+
+getvotealgo(inp)
