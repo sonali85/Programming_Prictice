@@ -1,0 +1,24 @@
+#n = 5
+#arr= [1,2,3,1,6]
+
+import collections
+
+arr = [1,1,4,6,7,3]
+dict1 = collections.Counter(arr)
+for i in range(min(arr),max(arr)+1):
+    if i in list(dict1.keys()):
+        print(i,"==",dict1[i])
+    else:
+        print(i,"= = ",0)
+        
+        
+        
+# output: 
+# 1 == 2
+# 2 = =  0
+# 3 == 1
+# 4 == 1
+# 5 = =  0
+# 6 == 1
+# 7 == 1        
+        
