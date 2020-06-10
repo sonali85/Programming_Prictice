@@ -1,0 +1,120 @@
+class Node:
+    def __init__(self,data):
+        self.data = data
+        self.next = None
+        self.prev = None
+
+class LinkList:
+    def __init__(self):
+        self.head = None
+
+    def insert(self,data):
+        data = Node(data)
+        if self.head:
+            temp = self.head
+            while True:
+                if temp.next is None:
+                    break
+                temp = temp.next
+            temp.next = data
+            data.prev = temp
+        else:
+            self.head = data
+
+    def Print(self):
+        temp = self.head
+        if self.head:
+            while True:
+                if temp is None:
+                    break
+                print(temp.data)
+                temp = temp.next
+        else:
+            print("empty forword list")
+
+
+
+    def PrintRev(self):
+        if self.head:
+            temp = self.head
+            while True:
+                if temp.next is None:
+                    tm = temp
+                    break
+                temp = temp.next
+
+            while True:
+                if tm is None:
+                    break
+                print(tm.data)
+                tm = tm.prev
+        else:
+            print("empty backword list")
+
+    def addFirst(self,data):
+        data = Node(data)
+        if self.head:
+            temp = self.head
+
+            data.next = temp
+            temp.prev = data
+            self.head = data
+        else:
+            self.head = data
+
+    def addMiddle(self,data,pos):
+        cnt = 1
+        data = Node(data)
+        temp = self.head
+        #print(temp.next)
+        if self.head:
+            while True:
+                if pos == cnt:
+                    temp.prev.next = data
+                    temp.prev = data
+                    data.next = temp
+                    data.prev = temp.prev
+                    break
+                temp = temp.next
+                cnt = cnt+1
+
+    def Delete_any_pos(self,pos):
+        temp = self.head
+        if self.head:
+            cnt = 0
+
+            if pos == 1:
+
+                self.head = self.head.next
+                temp.next = None
+                self.head.prev = None
+                del temp
+                return
+            while True:
+                if pos == cnt:
+                        temp.prev = prev1.prev.next
+                        prev1.prev.next = temp
+                        prev1.next = None
+                        prev1.prev = None
+                        del prev1
+                prev1 = temp
+                temp = temp.next
+                cnt = cnt+1
+
+
+
+l = LinkList()
+l.Print()
+l.PrintRev()
+l.insert(3)
+l.insert(5)
+l.insert(2)
+l.insert(8)
+l.addFirst(99)
+l.addMiddle(44,3)
+l.Print()
+l.Delete_any_pos(2)
+print("\\\\\\\\\\\\\\\\\\\\\\\\ reverse printint\\\\\\\\\\\\\\\\\\")
+l.Print()
+
+#l.PrintRev()
