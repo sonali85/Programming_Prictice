@@ -1,0 +1,28 @@
+import datetime
+
+print(datetime.date.today())
+p = datetime.date.today()
+print(p.month,p.day,p.year)
+#2020-06-11
+t= datetime.datetime.now()
+print(datetime.datetime.now())
+print(t.hour,t.minute,t.second,t.month)
+print(datetime.time())
+
+
+# #output
+# 2020-06-11
+# 6 11 2020
+# 2020-06-11 20:18:15.206005
+# 20 18 15 6
+# 00:00:00
+
+import time
+print(time.time())
+print(time.ctime())
+#time.sleep()
+
+# output:
+# 1591887142.6001425
+# Thu Jun 11 20:22:22 2020
+
