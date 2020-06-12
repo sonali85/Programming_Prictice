@@ -1,0 +1,19 @@
+
+import re
+name = "sonali borkar dgddfdffg hfdffdgj asdffdd asfd fghfghf"
+#output = "borkar sonali"
+
+#solution 1
+# res = re.compile('\w+')
+# result = res.findall(name)
+#print(result[::-1])
+
+#solution 2
+# len =len(result)-1
+# while True:
+#     print(result[len])
+#     len=len-1
+#
+#     if len < 0 :
+#         break
+#
