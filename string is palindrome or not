@@ -1,0 +1,35 @@
+#string is palindrom or not
+
+str = "soppos"
+
+#1st solution
+# if str == str[::-1]:
+#     print("palindrom")
+# else:
+#     print("not palindrom")
+#
+
+
+#second solution
+
+# n = len(str)//2
+# r = len(str)-1
+# flag = True
+# for i in range(n):
+#     print(str[i] ,str[r])
+#     if str[i] != str[r]:
+#         flag = False
+#         print("not palindrom")
+#         break
+#     r = r-1
+# if flag:
+#     print("palindrom")
+
+#3rd solution
+rev = "".join(reversed(str))
+if rev == str:
+    print("palindrom")
+else:
+    print("not palindrom")
+
+    
