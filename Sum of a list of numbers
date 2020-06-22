@@ -1,0 +1,44 @@
+#
+# num = 6
+#
+# def factorial(num):
+#         if num<1:
+#             return 0
+#         if num == 1:
+#             return 1
+#         return num * factorial(num-1)
+#
+# print(factorial(num))
+#
+# #5 4 3 2 1
+
+#Sum of a list of numbers
+#method1
+l = [1,2,3,4,5,6,7,8]
+def add(l):
+    sum = 0
+    for i in l:
+        sum =sum+i
+    print(sum)
+add(l)
+
+#solution2
+def rec_add(l):
+    if len(l) == 1:
+        return l[0]
+    return l[0]+rec_add(l[1:])
+print(rec_add(l))
+
+#method3
+sum = 0
+len1 = len(l)-1
+while True:
+    if len1 <0:
+        break
+    sum =sum+l[len1]
+    len1 = len1-1
+
+print(sum)
+
+
+#print(ll)
