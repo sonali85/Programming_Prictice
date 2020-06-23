@@ -1,0 +1,19 @@
+Write a Python program of recursion list sum. 
+Test Data: [1, 2, [3,4], [5,6]]
+Expected Result: 21
+
+l =  [1, 2, [3,4], [5,6,9]]
+
+def add_mult_list(l):
+    sum = 0
+    for i in l:
+
+        if type(i) == type([]):
+            sum =sum +add_mult_list(i)
+        else:
+            sum = sum + i
+
+    return sum
+
+print(add_mult_list(l))
+
