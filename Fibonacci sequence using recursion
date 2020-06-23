@@ -1,0 +1,42 @@
+num =7
+
+#method1
+# def fab_seq(num):
+#     a=0
+#     b=1
+#     if num >0:
+#         if num == 0:
+#             print(0)
+#         elif num ==1:
+#             print(0,1)
+#         else:
+#             print(0,1)
+#             num=num-3
+#             while True:
+#                 if num <0:
+#                     break
+#                 tmp = a+b
+#                 a=b
+#                 b=tmp
+#                 print(b)
+#                 num = num -1
+#                 #a,b=b,a
+#
+# fab_seq(num)
+#
+
+#method2
+
+def rec_fabc_seq(num):
+    if num<0:
+        print("invalid number")
+    if num==1:
+        return 0
+    elif num==2:
+        return 1
+    else:
+        return rec_fabc_seq(num-1)+rec_fabc_seq(num-2)
+
+print(rec_fabc_seq(9))
+
+#
