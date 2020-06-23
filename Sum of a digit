@@ -1,0 +1,23 @@
+# num = 11111
+#
+# #method
+# sp = list(str(num))
+# sum = 0
+# for i in sp:
+#     sum = sum+int(i)
+#
+# print(sum)
+
+
+#method2
+
+num=45
+
+def sum_digit(num):
+    if num ==0:
+        return 0
+    return num%10 + sum_digit(num//10)
+
+print(sum_digit(num))
+
+
