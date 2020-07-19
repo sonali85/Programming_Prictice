@@ -1,0 +1,27 @@
+
+
+unstructured_list = [10, 22,3, 45, 59, 7, 2]
+#structured_list = [[10, 22], [3, 45, 59], [7], [2]]
+def structured_list(unstructured_list):
+    structured_list=[]
+    new = []
+    #print(len(unstructured_list),unstructured_list)
+    for i in range(len(unstructured_list)):
+        if i == len(unstructured_list)-1:
+
+            #print(i,structured_list,new)
+            new.append(unstructured_list[i])
+            structured_list.append(new)
+            #print(structured_list)
+            return structured_list
+        #print(unstructured_list[i],unstructured_list[i+1])
+        if unstructured_list[i] < unstructured_list[i+1]:
+            new.append(unstructured_list[i])
+            #print("new",new)
+        else:
+            new.append(unstructured_list[i])
+            #print("else",new)
+            structured_list.append(new)
+            new = []
+    print(structured_list)
+print(structured_list(unstructured_list))
