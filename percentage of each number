@@ -1,0 +1,39 @@
+list1 = [1,2,3,4,5,6,2,2,1,4,5,6,3,4]
+
+#method 1 counter
+from collections import Counter
+
+def per(list1):
+    obj = Counter(list1)
+    new_res = {}
+    print(obj)
+    for i,j in obj.items():
+        res = j/len(list1) *100
+        new_res[i] = res
+    return new_res
+
+res = per(list1)
+print(res)
+print(sum(list(res.values())))
+
+#method2 : using count
+
+#temp = {}
+
+def get_per(list1):
+    temp = {}
+    res = {}
+    for i in list1:
+        if i not in list(temp.keys()):
+            temp[i] = list1.count(i)
+            r = temp[i] / len(list1) *100
+            res[i] = r
+
+    print(temp)
+    print(res)
+
+get_per(list1)
+
+
+
+
