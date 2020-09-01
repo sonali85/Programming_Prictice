@@ -1,0 +1,19 @@
+#method 1
+num = 1234
+def rev_num(num):
+    res = reversed(list(str(num)))
+    print("".join(res))
+rev_num(num)
+
+
+#method2
+def rev_num_method2(num):
+    sum = 0
+    #print(num,sum)
+    while(num>0):
+        rem = num %10
+        sum = (sum *10 )+rem
+        #print("sum",sum)
+        num = num//10
+    print(sum)
+rev_num_method2(num)
